@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node pkg="path_planning" type="path_planning_node" name="path_planning_node" output="screen">
+    <param name="vehicle_odom_topic" value="/carla/ego_vehicle/odometry" />
+    <param name="vehicle_cmd_topic" value="/carla/ego_vehicle/vehicle_control_cmd" />
+    <param name="roadmap_path" value="$(find path_planning)/data/reference_line_Town01.txt" />
+    <param name="map_path" value="$(find path_planning)/maps/Town01.xodr" />
+    <param name="target_speed" value="3" />
+    <param name="goal_tolerance" value="0.5" />
+    <param name="control_frequency" value="100" />
+    <param name="vis_frequency" value="0.5" />
+    <param name="path_vis_topic" value="path_vis" />
+    <param name="imu_topic" value='/imu_raw' />
+    <param name="speed_P" value="0.4" />
+    <param name="speed_I" value="0.1" />
+    <param name="speed_D" value="0" />
+    <param name="frame_id" value="map" />
+    <!-- c_speed = 3.6/3.6 -->
+    <param name="c_speed" value="1.0" />  
+    <param name="c_d" value="0.0" />  
+    <param name="c_d_d" value="0.0" />  
+    <param name="c_d_dd" value="0.0" />  
+    <param name="s0" value="0.0" />  
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz"  args="-d $(find path_planning)/rviz/lqr_control.rviz"> </node>
+</launch>

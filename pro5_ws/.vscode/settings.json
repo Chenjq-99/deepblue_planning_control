@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/carla-ros-bridge/melodic/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/home/chenjq/CARLA_0.9.13/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/carla-ros-bridge/melodic/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/home/chenjq/CARLA_0.9.13/PythonAPI/carla/dist/carla-0.9.13-py2.7-linux-x86_64.egg"
+    ]
+}
